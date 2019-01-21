@@ -9,6 +9,10 @@ public class TuberiasScript : MonoBehaviour {
     GameObject gestorJuego;
     // Use this for initialization
     void Start() {
+        //transform
+        //this.transofrm
+        //GetComponent<Transform>
+        transform.Translate(0, Random.Range(-2,2), 0);
         gestorJuego = GameObject.Find("GestorJuego");
         Destroy(this.gameObject, destroyTime);
     }

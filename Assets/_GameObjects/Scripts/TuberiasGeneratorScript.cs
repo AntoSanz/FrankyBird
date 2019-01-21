@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TuberiasGeneratorScript : MonoBehaviour {
     [SerializeField] GameObject tuberiasPrefab;
-    [SerializeField] float timeBetweenPipes = 2.2f;
+    [SerializeField] float timeBetweenPipes = 2f;
     GameObject gestorJuego;
 
     void Start() {

@@ -52,6 +52,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4076050789951418}
+  - component: {fileID: 65164808582542996}
   m_Layer: 0
   m_Name: TuberiaSuperior
   m_TagString: Untagged
@@ -153,6 +154,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4074463250946896}
+  - component: {fileID: 65477996763477904}
   m_Layer: 0
   m_Name: TuberiaInferior
   m_TagString: Untagged
@@ -465,6 +467,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
   m_Center: {x: 0.000000059604645, y: 0.0000009536743, z: -0.00000008940697}
+--- !u!65 &65164808582542996
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1506301368414638}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65250918297692296
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -477,13 +491,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
   m_Center: {x: 0.00000025331974, y: 0, z: 0.000000029802322}
+--- !u!65 &65477996763477904
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1973253459147330}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65961813859621106
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1783471271034570}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: b8df75edde4fb9548befac15497d3970, type: 2}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
