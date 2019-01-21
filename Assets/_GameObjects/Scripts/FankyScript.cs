@@ -43,6 +43,13 @@ public class FankyScript : MonoBehaviour {
             sangre.transform.position = this.transform.position; //Ponemos la sangre en la posicion del pollo
             //audioSource.PlayOneShot(golpe);
             Destroy(this.gameObject); //Destruimos el pollo
+            print("YOU DIED");
         }
+    }
+
+    private void OnTriggerExit(Collider other) {
+        int puntos = gestorJuego.GetComponent<GestorJuego>().Puntos;
+        puntos++;
+        gestorJuego.GetComponent<GestorJuego>().Puntos = puntos;
     }
 }
