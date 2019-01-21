@@ -9,6 +9,7 @@ public class FankyScript : MonoBehaviour {
     [SerializeField] AudioClip golpe;
     [SerializeField] AudioClip puntuacion;
     [SerializeField] GameObject gestorJuego;
+    [SerializeField] float velocidadRotacion = -5f;
     private Rigidbody rb; //Creamos una propiedad para el RigidBody.
     private AudioSource audioSource;
     // Use this for initialization
@@ -21,11 +22,11 @@ public class FankyScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (rb.velocity.y > 0) {
-            transform.rotation = Quaternion.Euler(new Vector3(25, 0, 0));
-        } else {
-            transform.rotation = Quaternion.Euler(new Vector3(-25, 0, 0));
-        }
+        //if (rb.velocity.y > 0) {
+            transform.rotation = Quaternion.Euler(new Vector3(rb.velocity.y* velocidadRotacion, 0, 0));
+        //} else {
+        //    transform.rotation = Quaternion.Euler(new Vector3(-25, 0, 0));
+        //}
         //Se ejecuta constantemente cada 0.016 segundos aprox
         if (Input.GetKeyDown(KeyCode.Space)) {
             //Los efectos que se aplican al Rigidbody se aplican a todo el componente
