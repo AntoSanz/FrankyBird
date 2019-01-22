@@ -1,2 +1,2 @@
 # FrankyBird
-Download .exe to get game!
+Download FrankyBirdExe.rar to get game!
