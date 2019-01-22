@@ -1,2 +1,2 @@
 # FrankyBird
-Download .exe to get game.
+Download .exe to get game!
