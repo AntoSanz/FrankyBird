@@ -16,18 +16,13 @@ public class FankyScript : MonoBehaviour {
     void Start() {
         gestorJuego = GameObject.Find("GestorJuego");
         //Se inicia una vez al iniciar el scritp
-        rb = GetComponent<Rigidbody>(); //Dar un valor inicial al Rigidbody y genera una referencia
+        rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update() {
-        //if (rb.velocity.y > 0) {
-            transform.rotation = Quaternion.Euler(new Vector3(rb.velocity.y* velocidadRotacion, 0, 0));
-        //} else {
-        //    transform.rotation = Quaternion.Euler(new Vector3(-25, 0, 0));
-        //}
-        //Se ejecuta constantemente cada 0.016 segundos aprox
+        transform.rotation = Quaternion.Euler(new Vector3(rb.velocity.y * velocidadRotacion, 0, 0));
         if (Input.GetKeyDown(KeyCode.Space)) {
             //Los efectos que se aplican al Rigidbody se aplican a todo el componente
             Impulsar();
@@ -35,7 +30,6 @@ public class FankyScript : MonoBehaviour {
     }
 
     void Impulsar() {
-        //print("IMPULSANDO");
         rb.AddForce(Vector3.up * force, ForceMode.Impulse); //Vector3.upo aplica una unidad de fuerza hacia arriba
         audioSource.PlayOneShot(aleteo);
     }
@@ -44,12 +38,11 @@ public class FankyScript : MonoBehaviour {
         //Llamada a FinalizarJuego del GestorJuego
         //print(collision.gameObject.name);
         if (collision.gameObject.CompareTag("Limite") == false) {
-            gestorJuego.GetComponent<GestorJuego>().FinalizarPartida();
-            GameObject sangre = Instantiate(sangrePrefab); //Instanciamos la sangre 
-            sangre.transform.position = this.transform.position; //Ponemos la sangre en la posicion del pollo
-            //audioSource.PlayOneShot(golpe);
-            Destroy(this.gameObject); //Destruimos el pollo
-            print("YOU DIED");
+            gestorJuego.GetComponent<GestorJuego>().SetJugando(false);
+            gestorJuego.GetComponent<GestorJuego>().MostrarMenu();
+            GameObject sangre = Instantiate(sangrePrefab);
+            sangre.transform.position = this.transform.position;
+            Destroy(this.gameObject);
         }
     }
 
