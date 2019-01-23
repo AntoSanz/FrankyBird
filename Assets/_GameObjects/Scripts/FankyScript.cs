@@ -23,10 +23,11 @@ public class FankyScript : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         transform.rotation = Quaternion.Euler(new Vector3(rb.velocity.y * velocidadRotacion, 0, 0));
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            //Los efectos que se aplican al Rigidbody se aplican a todo el componente
+        if (rb.IsSleeping() == true)
+            rb.WakeUp();
+        
+        if (Input.GetKeyDown(KeyCode.Space))
             Impulsar();
-        }
     }
 
     void Impulsar() {
